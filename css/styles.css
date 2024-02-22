@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: -webkit-box; /* para compatibilidad con navegadores basados en WebKit */
+    -webkit-line-clamp: 1; /* número máximo de líneas a mostrar */
+    -webkit-box-orient: vertical; /* orientación del contenido */
+    overflow: hidden; /* oculta el texto que se desborda del contenedor */
+    text-overflow: ellipsis;
+}
+
+:root{
+    --font-weight__letra-pequeña:400;
+    --font-weight__letra-mediana:600;
+    --font-weight__letra-grande:700;
+    --primary-color:hsl(75, 94%, 57%);
+    --white:hsl(0, 0%, 100%);
+    --grey:hsl(0, 0%, 20%);
+    --dark-grey:hsl(0, 0%, 12%);
+    --off-black:hsl(0, 0%, 8%);
+}
+
+body{
+    font-size: 14px;
+    font-family: 'Inter', 'Helvetica Neue';
+    background-color: var(--off-black);
+}
+
+.container{
+    max-width: 375px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    flex-grow: 0;
+    min-width: 300px;
+    margin-top: 3rem;
+    margin-left: 2rem;
+}
+
+.card{
+    background-color: var(--dark-grey);
+    opacity: .8;
+    width: inherit;
+    height: 440px;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 1;
+}
+
+.card__img{
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.9rem;
+    left: 5.7rem;
+    background-image: url(../imagenes/woman.jpg);
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card__name{
+    font-weight: var(--font-weight__letra-mediana);
+    margin-top: 5.1rem;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.card__ubication{
+    color: var(--primary-color);
+    font-weight: var(--font-weight__letra-pequeña);
+    margin-top: -22rem;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    max-lines: 1;
+    text-align: center;
+}
+
+.card__profession{
+    color: var(--white);
+    font-weight: var(--font-weight__letra-pequeña);
+    width: 100%;
+    margin-top: 1.5rem;
+    font-size: 10px;
+    text-align: center;
+}
+
+.social__media__links{
+    position: absolute;
+    top: 12.5rem;
+    left: 1.5rem;
+    width: 90%;
+}
+
+.social__media__link{
+    margin-top: .9rem;
+    text-align: center;
+    width: inherit;
+    height: 20px;
+    background-color: var(--grey);
+    font-size: 10px;
+    padding: 10px 20px 20px;
+    border-radius: 4px;
+    color: var(--white);
+    font-weight: var(--font-weight__letra-grande);
+    cursor: pointer;
+}
+
+.social__media__link-active:hover{
+    background-color: var(--primary-color);
+    color: var(--off-black);
+}
+
+.social__media__link:hover{
+    opacity: .5;
+}
+
+@media (min-width:376px){
+    .container{
+        max-width: 1440px;
+    }
+}
